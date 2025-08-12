@@ -6,7 +6,8 @@ public class Order {
     private BigDecimal total;
     private boolean vip;
 
-    public Order() { }
+    public Order() {
+    }
 
     public Order(BigDecimal total, boolean vip) {
         this.total = total;

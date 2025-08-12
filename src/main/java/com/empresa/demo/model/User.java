@@ -1,11 +1,20 @@
 package com.empresa.demo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "users")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false, unique = true)
     private String email;
 
-    public User() { }
+    public User() {
+    }
 
     public User(Long id, String name, String email) {
         this.id = id;
@@ -37,5 +46,5 @@ public class User {
         this.email = email;
     }
 
-    }
 }
+
